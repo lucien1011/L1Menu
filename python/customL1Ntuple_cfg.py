@@ -120,6 +120,36 @@ options.register('puReweightingFile',
                  VarParsing.VarParsing.varType.string,
                  "InputFile to be used for PU reweighting (for example to scale luminosity)")
 
+options.register('skipEvents',
+                 0, #default value
+                 VarParsing.VarParsing.multiplicity.singleton,
+                 VarParsing.VarParsing.varType.int,
+                 "Number of events to skip")
+
+options.register('processEvents',
+                 0, #default value
+                 VarParsing.VarParsing.multiplicity.singleton,
+                 VarParsing.VarParsing.varType.int,
+                 "Number of events to process")
+
+options.register('inputFiles',
+                 "file:inputFile.root", #default value
+                 VarParsing.VarParsing.multiplicity.list,
+                 VarParsing.VarParsing.varType.string,
+                 "Input files")
+
+options.register('outputFile',
+                 "file:outputFile.root", #default value
+                 VarParsing.VarParsing.multiplicity.singleton,
+                 VarParsing.VarParsing.varType.string,
+                 "Output file")
+
+#options.register('globalTag',
+#		'GR_H_V58C',
+#		VarParsing.VarParsing.multiplicity.singleton,
+#		VarParsing.VarParsing.varType.string,
+#		"Global Tag")
+
 options.parseArguments()
 
 
